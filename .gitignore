@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+*.d.ts
+*.d.ts.map
+*.js.map
+!src/**/*.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Database
+drizzle.db
+drizzle/migrations/meta/
+*.sqlite
+*.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.turbo/
+temp/
+tmp/
+
+# Documentation
+*.md
+!README.md
