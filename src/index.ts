@@ -9,7 +9,7 @@ import { errorHandlerMiddleware } from './middleware/errorHandler'
 import { logger } from './utils/logger'
 
 const PORT = parseInt(process.env.AUTH_SERVICE_PORT || '3005', 10)
-const HOST = process.env.AUTH_SERVICE_HOST || '0.0.0.0'
+const HOST = process.env.NODE_ENV === 'production' ? '0.0.0.0' : (process.env.AUTH_SERVICE_HOST || '0.0.0.0')
 
 const app = express();
 

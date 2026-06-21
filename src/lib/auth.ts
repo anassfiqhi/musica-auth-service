@@ -12,7 +12,9 @@ import * as schema from '../db/schema'
  * - JWT tokens for all API calls
  */
 export const auth = betterAuth({
-  baseURL: process.env.BETTER_AUTH_URL || 'http://localhost:8000',
+  baseURL:
+    process.env.BETTER_AUTH_BASE_URL ||
+    (process.env.RAILWAY_PUBLIC_DOMAIN ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}` : 'http://localhost:8000'),
   trustedOrigins: [
     'http://localhost:3000',
     'http://localhost:8081',
